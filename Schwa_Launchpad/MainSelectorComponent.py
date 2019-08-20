@@ -1,4 +1,4 @@
-# Embedded file name: /Users/versonator/Jenkins/live/output/mac_64_static/Release/python-bundle/MIDI Remote Scripts/Schwa-Launchpad/MainSelectorComponent.py
+# Embedded file name: /Users/versonator/Jenkins/live/output/mac_64_static/Release/python-bundle/MIDI Remote Scripts/Schwa_Launchpad/MainSelectorComponent.py
 # Compiled at: 2018-04-23 20:27:04
 from __future__ import absolute_import, print_function, unicode_literals
 from _Framework.SessionZoomingComponent import DeprecatedSessionZoomingComponent
@@ -10,7 +10,7 @@ USER_2_MODE = 2
 MIXER_MODE = 3
 
 class MainSelectorComponent(ModeSelectorComponent):
-    u""" Class that reassigns the button on the Schwa-Launchpad to different functions """
+    u""" Class that reassigns the button on the Schwa_Launchpad to different functions """
 
     def __init__(self, matrix, top_buttons, side_buttons, config_button):
         assert isinstance(matrix, ButtonMatrixElement)
