@@ -1,4 +1,4 @@
-# Embedded file name: /Users/versonator/Jenkins/live/output/mac_64_static/Release/python-bundle/MIDI Remote Scripts/Launchpad/Launchpad.py
+# Embedded file name: /Users/versonator/Jenkins/live/output/mac_64_static/Release/python-bundle/MIDI Remote Scripts/Schwa-Launchpad/Schwa-Launchpad.py
 # Compiled at: 2018-04-23 20:27:04
 from __future__ import absolute_import, print_function, unicode_literals
 import Live
@@ -12,8 +12,8 @@ SIDE_NOTES = (8, 24, 40, 56, 72, 88, 104, 120)
 DRUM_NOTES = (41, 42, 43, 44, 45, 46, 47, 57, 58, 59, 60, 61, 62, 63, 73, 74, 75, 76,
               77, 78, 79, 89, 90, 91, 92, 93, 94, 95, 105, 106, 107)
 
-class Launchpad(ControlSurface):
-    u""" Script for Novation's Launchpad Controller """
+class Schwa-Launchpad(ControlSurface):
+    u""" Script for Novation's Schwa-Launchpad Controller """
 
     def __init__(self, c_instance):
         ControlSurface.__init__(self, c_instance)
@@ -21,8 +21,8 @@ class Launchpad(ControlSurface):
             self._suppress_send_midi = True
             self._suppress_session_highlight = True
             is_momentary = True
-            self._suggested_input_port = 'Launchpad'
-            self._suggested_output_port = 'Launchpad'
+            self._suggested_input_port = 'Schwa-Launchpad'
+            self._suggested_output_port = 'Schwa-Launchpad'
             self._control_is_with_automap = False
             self._user_byte_write_button = ButtonElement(is_momentary, MIDI_CC_TYPE, 0, 16)
             self._user_byte_write_button.name = 'User_Byte_Button'

@@ -1,4 +1,4 @@
-# Embedded file name: /Users/versonator/Jenkins/live/output/mac_64_static/Release/python-bundle/MIDI Remote Scripts/Launchpad/MainSelectorComponent.py
+# Embedded file name: /Users/versonator/Jenkins/live/output/mac_64_static/Release/python-bundle/MIDI Remote Scripts/Schwa-Launchpad/MainSelectorComponent.py
 # Compiled at: 2018-04-23 20:27:04
 from __future__ import absolute_import, print_function, unicode_literals
 from _Framework.SessionZoomingComponent import DeprecatedSessionZoomingComponent
@@ -10,7 +10,7 @@ USER_2_MODE = 2
 MIXER_MODE = 3
 
 class MainSelectorComponent(ModeSelectorComponent):
-    u""" Class that reassigns the button on the launchpad to different functions """
+    u""" Class that reassigns the button on the Schwa-Launchpad to different functions """
 
     def __init__(self, matrix, top_buttons, side_buttons, config_button):
         assert isinstance(matrix, ButtonMatrixElement)
@@ -74,7 +74,8 @@ class MainSelectorComponent(ModeSelectorComponent):
                 self._modes_buttons.append(button)
                 button.add_value_listener(self._mode_value, identify_sender)
 
-        self.set_mode(SESSION_MODE)
+        #self.set_mode(SESSION_MODE)
+        self.set_mode(USER_2_MODE)
         return
 
     def number_of_modes(self):
@@ -122,8 +123,8 @@ class MainSelectorComponent(ModeSelectorComponent):
             self._config_button.send_value(1)
             release_buttons = self._mode_index == USER_1_MODE
             if self._mode_index == SESSION_MODE:
-                self._setup_mixer(not as_active)
-                self._setup_session(as_active, as_enabled)
+                #self._setup_mixer(not as_active)
+                #self._setup_session(as_active, as_enabled)
             else:
                 if self._mode_index == USER_1_MODE:
                     self._setup_session(not as_active, not as_enabled)
@@ -136,8 +137,8 @@ class MainSelectorComponent(ModeSelectorComponent):
                         self._setup_user(release_buttons)
                     else:
                         if self._mode_index == MIXER_MODE:
-                            self._setup_session(not as_active, as_enabled)
-                            self._setup_mixer(as_active)
+                            #self._setup_session(not as_active, as_enabled)
+                            #self._setup_mixer(as_active)
                         else:
                             assert False
             self._session.set_allow_update(True)
